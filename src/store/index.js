@@ -5,12 +5,11 @@ class GameStore {
     position: [-100, -100],
     angle: 0
   };
-  setPosition(position) {
+  @observable backgroundX = 0;
+  setPositions(position, backgroundX) {
     this.character.position = position;
-  }
-  setAngle(angle) {
-    this.character.angle = angle;
+    this.backgroundX = backgroundX;
   }
 }
 
-export default new GameStore();
+export default GameStore;

@@ -18,6 +18,7 @@ import Spikes from './components/spikes';
 import Background from './components/background';
 
 export default class Game extends Component {
+
   constructor(props) {
     super(props);
     this.forceQueue = null;
@@ -26,9 +27,11 @@ export default class Game extends Component {
     this.collisionCallback = this.collisionCallback.bind(this);
     this.spikePositions = generateSpikePositions();
   }
+
   componentWillMount() {
     this.store = new GameStore();
   }
+
   componentDidMount() {
     init({
       store: this.store,
@@ -38,9 +41,11 @@ export default class Game extends Component {
       collisionCallback: this.collisionCallback
     });
   }
+
   createForce() {
     this.forceQueue = [0, 700];
   }
+
   stepCallback(character, spikeBodies, background) {
     if(this.forceQueue) {
       character.force = this.forceQueue;
@@ -51,9 +56,11 @@ export default class Game extends Component {
     }
     background.position[0] -= 5 / 100;
   }
+
   collisionCallback() {
     this.props.onDead();
   }
+
   render() {
     return (
       <TouchableOpacity
@@ -70,6 +77,7 @@ export default class Game extends Component {
       </TouchableOpacity>
     )
   }
+  
 }
 
 const styles = StyleSheet.create({

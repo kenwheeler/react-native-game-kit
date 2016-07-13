@@ -8,10 +8,12 @@ import { observer } from 'mobx-react/native';
 
 @observer
 export default class Background extends Component {
+
   constructor(props) {
     super(props);
     this.getPosition = this.getPosition.bind(this);
   }
+
   getPosition() {
     return {
       transform: [
@@ -19,6 +21,7 @@ export default class Background extends Component {
       ]
     };
   }
+
   render() {
     return (
       <View style={[styles.background, this.getPosition()]}>
@@ -26,6 +29,7 @@ export default class Background extends Component {
       </View>
     );
   }
+  
 }
 
 const styles = StyleSheet.create({

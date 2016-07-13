@@ -10,6 +10,7 @@ import Sprite from './sprite';
 
 @observer
 export default class Game extends Component {
+
   getPosition() {
     return {
       transform: [
@@ -18,6 +19,7 @@ export default class Game extends Component {
       ]
     }
   }
+
   render() {
     return (
       <View style={[styles.character, this.getPosition()]}>
@@ -25,6 +27,7 @@ export default class Game extends Component {
       </View>
     );
   }
+  
 }
 
 const styles = StyleSheet.create({

@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 
 export default class Dead extends Component {
+
   render() {
     return (
       <TouchableOpacity
@@ -20,6 +21,7 @@ export default class Dead extends Component {
       </TouchableOpacity>
     );
   }
+  
 }
 
 const styles = StyleSheet.create({

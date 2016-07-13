@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 
 export default class Spike extends Component {
+
   getPosition() {
     const { index, position, store } = this.props;
     return {
@@ -14,6 +15,7 @@ export default class Spike extends Component {
       bottom: 0
     }
   }
+
   render() {
     return (
       <View style={[styles.spike, this.getPosition()]}>
@@ -24,6 +26,7 @@ export default class Spike extends Component {
       </View>
     );
   }
+
 }
 
 const styles = StyleSheet.create({

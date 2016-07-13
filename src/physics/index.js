@@ -9,6 +9,7 @@ const spikeBodies = [];
 let animationFrame = null;
 
 export function init(options) {
+  
   let { store, dimensions, spikes, stepCallback, collisionCallback } = options;
 
   // CREATE WORLD
@@ -127,4 +128,3 @@ export function init(options) {
   // BEGIN
   animationFrame = requestAnimationFrame(update);
 }
-

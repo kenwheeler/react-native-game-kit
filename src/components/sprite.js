@@ -14,12 +14,14 @@ const sheet = [
 ];
 
 export default class Sprite extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
       spriteIndex: 0
     };
   }
+
   componentDidMount() {
     this.interval = setInterval(() => {
       const { spriteIndex } = this.state;
@@ -30,9 +32,11 @@ export default class Sprite extends Component {
       });
     }, 100);
   }
+
   componentWillUnmount() {
     clearInterval(this.interval);
   }
+
   render() {
     return (
       <View style={styles.sprite}>
@@ -40,6 +44,7 @@ export default class Sprite extends Component {
       </View>
     );
   }
+  
 }
 
 const styles = StyleSheet.create({
